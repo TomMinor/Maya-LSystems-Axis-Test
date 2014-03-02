@@ -68,9 +68,3 @@ test = LSystem_Grid(("ABCBBCA", "ACBB", "BCABAB"), 6, 8, 32, 8)
 test.parse( { "A":lambda : (cmds.scale(0.5, 48, 0.5)),
               "B":lambda : (cmds.scale(8,8,8)),
               "C":lambda : (cmds.scale(3,9,3)) } )
-
-class LSystem_Terrain:
-    def __init__(self, width, height):
-        cmds.polyPlane(width=width, height=height)
-
-test2 = LSystem_Terrain(128, 128)
